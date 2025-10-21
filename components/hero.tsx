@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { GL } from "./gl";
-import { Pill } from "./pill";
-import { Button } from "./ui/button";
-import { useState } from "react";
+import Link from "next/link"
+import { GL } from "./gl"
+import { Pill } from "./pill"
+import { Button } from "./ui/button"
+import { useState } from "react"
 
 export function Hero() {
-  const [hovering, setHovering] = useState(false);
+  const [hovering, setHovering] = useState(false)
   return (
     <div className="flex flex-col h-svh justify-between">
       <GL hovering={hovering} />
 
       <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">BETA RELEASE</Pill>
+        <Pill className="mb-6">BETA VERSION</Pill>
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
           Unlock your <br />
           <i className="font-light">future</i> growth
@@ -23,11 +23,7 @@ export function Hero() {
         </p>
 
         <Link className="contents max-sm:hidden" href="/#contact">
-          <Button
-            className="mt-14"
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-          >
+          <Button className="mt-14" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
             [Contact Us]
           </Button>
         </Link>
@@ -43,5 +39,5 @@ export function Hero() {
         </Link>
       </div>
     </div>
-  );
+  )
 }

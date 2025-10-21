@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Logo } from "./logo";
-import { MobileMenu } from "./mobile-menu";
+import Link from "next/link"
+import { Logo } from "./logo"
+import { MobileMenu } from "./mobile-menu"
 
 export const Header = () => {
   return (
@@ -10,21 +10,21 @@ export const Header = () => {
           <Logo className="w-[100px] md:w-[120px]" />
         </Link>
         <nav className="flex max-lg:hidden absolute left-1/2 -translate-x-1/2 items-center justify-center gap-x-10">
-          {["About", "Portfolio", "Insights", "Contact"].map((item) => (
-            <Link
-              className="uppercase inline-block font-mono text-foreground/60 hover:text-foreground/100 duration-150 transition-colors ease-out"
-              href={`#${item.toLowerCase()}`}
-              key={item}
-            >
-              {item}
-            </Link>
-          ))}
+          {["Services", "Portfolio", "Insights", "Contact"].map((item, index) => {
+            const hrefs = ["services", "portfolio", "insights", "contact"]
+            return (
+              <Link
+                className="uppercase inline-block font-mono text-foreground/60 hover:text-foreground/100 duration-150 transition-colors ease-out"
+                href={`#${hrefs[index]}`}
+                key={item}
+              >
+                {item}
+              </Link>
+            )
+          })}
         </nav>
-        <Link className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-primary hover:text-primary/80" href="/#sign-in">
-          Sign In
-        </Link>
         <MobileMenu />
       </header>
     </div>
-  );
-};
+  )
+}
