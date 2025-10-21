@@ -70,7 +70,7 @@ export function Services() {
       <div className="text-center">
         <Link href="/#contact">
           <Button size="lg" className="font-mono bg-primary text-primary-foreground hover:bg-primary/90">
-            <span data-border="top-left" class="absolute inline-block w-[var(--h)] top-[var(--hh)] left-[var(--hh)] h-[2px] -rotate-45 origin-top -translate-x-1/2" style="--h: 32px; --hh: 6.5px;"></span><span data-border="bottom-right" class="absolute w-[var(--h)] bottom-[var(--hh)] right-[var(--hh)] h-[2px] -rotate-45 translate-x-1/2" style="--h: 32px; --hh: 6.5px;"></span>[Contact Us]
+            [Contact Us]
           </Button>
         </Link>
       </div>

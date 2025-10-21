@@ -17,7 +17,6 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Insights", href: "#insights" },
-    { name: "Contact", href: "#contact" },
   ]
 
   const handleLinkClick = () => {
