@@ -15,7 +15,6 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
 
   const menuItems = [
     { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
     { name: "Insights", href: "#insights" },
   ]
 
@@ -36,7 +35,11 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
       </Dialog.Trigger>
 
       <Dialog.Portal>
-        <div data-overlay="true" className="fixed z-30 inset-0 bg-black/50 backdrop-blur-sm" />
+        <div
+          data-overlay="true"
+          className="fixed z-30 inset-0 backdrop-blur-sm"
+          style={{ backgroundColor: "#2d5f54" }}
+        />
 
         <Dialog.Content
           onInteractOutside={(e) => {
