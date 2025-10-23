@@ -68,7 +68,7 @@ export function Services() {
       </div>
 
       <div className="text-center">
-        <Link href="/#contact">
+        <Link href="/contact">
           <Button size="lg" className="font-mono bg-primary text-primary-foreground hover:bg-primary/90">
             [Contact Us]
           </Button>
