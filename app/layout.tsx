@@ -1,12 +1,19 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist_Mono } from "next/font/google"
+import { Raleway, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
+
+const raleway = Raleway({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -22,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} antialiased`} suppressHydrationWarning>
+      <body className={`${spaceGrotesk.variable} ${raleway.variable} antialiased`} suppressHydrationWarning>
         <Header />
         {children}
       </body>
